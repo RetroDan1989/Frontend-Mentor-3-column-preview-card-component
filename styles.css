@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Bright_orange: hsl(31, 77%, 52%);
+--Dark_cyan: hsl(184, 100%, 22%);
+--Very_dark_cyan: hsl(179, 100%, 13%);
+
+--Transparent_white_paragraphs: hsla(0, 0%, 100%, 0.75);
+--Very_light_gray_background_headings_buttons: hsl(0, 0%, 95%);
+}
+
+body {
+    /* padding:20px; */
+
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    max-width: 920px;
+    max-height: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sedans {
+
+    grid-area: sedans;
+    grid-column: 1/2;
+    background-color: var(--Bright_orange);
+
+    /* grid-area: sedans; */
+}
+
+.suvs {
+
+    grid-area: suvs;
+    grid-column: 2/3;
+    background-color: var(--Dark_cyan);
+
+    /* grid-area: suvs; */
+}
+
+.luxury {
+
+    grid-area: luxury;
+    grid-column: 3/4;
+    background-color: var(--Very_dark_cyan);
+
+    /* grid-area: luxury; */
+}
+
+.sections {
+    padding: 45px;
+}
+
+.image-container {
+    margin-bottom: 45px;
+}
+
+h1 {
+    color: var(--Very_light_gray_background_headings_buttons);
+    margin-bottom: 45px;
+
+    font-family: 'Big Shoulders Display', cursive;
+
+    font-weight: 700;
+
+}
+
+p {
+    margin-bottom: 45px;
+    line-height: 30px;
+    color: var(--Transparent_white_paragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+
+}
+
+button {
+    width: 145px;
+    padding: 20px;
+    border-radius: 30px;
+
+    border: none;
+    background-color: var(--Very_light_gray_background_headings_buttons);
+}
+
+
+@media screen and (max-width:600px) {
+
+    body {
+        padding: 20px;
+        padding-top: 100px;
+    }
+
+    .card {
+
+
+        margin: 150px auto;
+
+        display: grid;
+        grid-template-areas:
+        "sedans sedans sedans"
+        "suvs suvs suvs"
+        "luxury luxury luxury" 
+        ;
+
+        min-width: 330px;
+        min-height: 100vh;
+      
+
+
+        
+    }
+
+    .sedans, .suvs, .luxury {
+        grid-column: 1/4;
+    }
+
+
+
+    
+    
+}
